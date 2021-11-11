@@ -1,15 +1,14 @@
+import dotenv from 'dotenv';
+import config from 'config';
+dotenv.config();
 import { Application } from 'express';
 import fetchNews from './utils/newsApiFetcher';
 import log from './utils/logger';
-import config from 'config';
 import { connect } from './db/connection';
 import { createServer } from './utils/server';
-import dotenv from 'dotenv';
 
-dotenv.config();
 
 const PORT = process.env.PORT
-//const PORT = config.get<string>("port");
 export const app:Application = createServer();
 
 app.listen(PORT || 8080, async () => {

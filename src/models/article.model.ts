@@ -1,14 +1,9 @@
 import mongoose from "mongoose";
 
 export interface ArticleQuery {
-    q?: string,
-    sources?: string,
-    domains?: string,
-    from?: string,
-    to?: string,
-    language?: string,
-    sortBy?: string,
-    page?: number
+  words?: string,
+  from?: Date,
+  to?: Date
 }
 
 export interface ArticleRequest {
@@ -19,12 +14,12 @@ export interface ArticleRequest {
     url: string,
     urlToImage: string | null,
     publishedAt: string,
-    content: string | null,
+    content: string | null
 }
 
 export interface ArticleDocument extends mongoose.Document {
-  createdAt: Date;
-  updatedAt: Date;
+  createdAt: Date,
+  updatedAt: Date
 }
 
 const articleSchema = new mongoose.Schema(
