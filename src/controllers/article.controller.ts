@@ -1,5 +1,4 @@
 import { Request, Response } from "express";
-import { ArticleQuery } from "../models/article.model";
 import { findManyArticles, findArticle } from "../services/article.service";
 import { divideTextToWords } from "../utils/text.utils";
 

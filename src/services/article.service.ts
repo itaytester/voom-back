@@ -3,7 +3,6 @@ import ArticleModel, {
   ArticleRequest,
 } from "../models/article.model";
 import { FilterQuery, QueryOptions } from "mongoose";
-import logger from "../utils/logger";
 
 
 export async function storeArticles(articles: ArticleRequest[]): Promise<ArticleDocument[]> {
